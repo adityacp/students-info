@@ -1,0 +1,16 @@
+{% extends 'admin/change_list.html' %}
+{% load static %}
+
+{% block object-tools %}
+{{ block.super }}
+<div>
+<form action="add_students/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <strong>Select books csv: </strong><input type="file" name="student_file">
+    <br>
+    <b>and Click</b>
+    <input type="submit" value="Upload" name="upload_students">
+</form>
+</div>
+<br>
+{% endblock %}

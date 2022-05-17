@@ -1,0 +1,24 @@
+{% extends "website/base.html" %}
+{% block objects %}
+<br>
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-12">
+            <ul class="list-group">
+                <a href="{% url 'website:index' %}">Back</a>
+                <h4>Student Info</h4>
+                {% for key, value in data %}
+                    {% if key != "books" %}
+                        <li class="list-group-item">{{key}} : - {{value}}</li>
+                    {% else %}
+                        {% for book in value %}
+                        <li class="list-group-item">Book Name: - {{book.book}}</li>
+                        <li class="list-group-item">Pages Read: - {{book.pages_read}}</li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
