@@ -1,6 +1,10 @@
 Students Data Application
 ========================
 
+Deployment Link: - https://carnot-tech-task.herokuapp.com/admin
+username: - test_admin
+password: - python321
+
 
 Requirements
 ^^^^^^^^^^^^
